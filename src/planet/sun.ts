@@ -26,6 +26,6 @@ export class Sun extends AbstractPlanet {
         const x = this.group.position.x;
         const y = Math.cos(elapsedTimeSlowMo) * 100;
         const z = Math.sin(elapsedTimeSlowMo) * 350;
-        this.group.position.set(x, y, z);
+        // this.group.position.set(x, y, z);
     }
 }

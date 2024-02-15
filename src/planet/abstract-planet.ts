@@ -1,6 +1,7 @@
 import {Clock, Color, Group, Mesh, MeshPhysicalMaterial, Vector3} from "three";
 import * as THREE from "three";
 import {Material} from "three/src/materials/Material";
+import {Object3D} from "three/src/core/Object3D";
 
 export interface Planet {
     radius: number; // m
@@ -16,8 +17,8 @@ export abstract class AbstractPlanet {
     private _color: Color | undefined;
     private _isHover: boolean = false;
     private _group: Group = new THREE.Group();
-    private _mesh: Mesh | undefined;
-    private _hoverMesh: Mesh | undefined;
+    private _mesh: Object3D | undefined;
+    private _hoverMesh: Object3D | undefined;
 
     protected getSlowMo(): number {
         return 0.1;
